@@ -1,0 +1,14 @@
+﻿<div class="topMargin" ng-controller="homeCtrl">
+    <h3>Welcome to U.S weather app</h3>
+    <h3> Simply enter your zip code and get real weather time results</h3>
+    <div class="list list-inset">
+        <label class="item item-input">
+            <i class="ion-location placeholder-icon"></i>
+            <input type="number" placeholder="Zip Code" ng-model="zipcode">
+        </label>
+    </div>
+    
+    <button class="button button-full button-positive" ng-click="SubmitZipCode(zipcode)">
+     Check Weather Conditions
+    </button>
+    </div>
