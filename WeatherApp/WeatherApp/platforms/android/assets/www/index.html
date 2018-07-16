@@ -26,7 +26,8 @@
               crossorigin="anonymous"></script>
     <!-- Main App's js -->
     <script src="js/app.js"></script>
-
+      <script> var exports = {}; </script>
+    <script src="js/main.js"></script>
    <!-- Controllers-->
       <script src="directives/controllers/_homeCtrl.js"></script>
       <script src="directives/controllers/_menuCtrl.js"></script>
@@ -35,10 +36,12 @@
   <body ng-app="weatherApp" class="platform-android platform-cordova platform-webview">
 
     <ion-pane>
-        <menu></menu>
+        <menu>
+            <!--Menu direcitve to be included one time only -->
+        </menu>
       
       <ion-content id="pageLoad">
-        
+        <!--This is where the directives will be loaded into. DO NOT PUT ANY CODE IN HERE. It will be removed on page load-->
       </ion-content>
     </ion-pane>
   </body>

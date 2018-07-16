@@ -1,12 +1,74 @@
-﻿<div ng-controller="menuCtrl" id="menu" > 
-    <ion-header-bar align-title="left" class="bar-positive" >
+﻿<div id="menu" > 
+    <ion-header-bar align-title="left" class="bar-positive">
         <div class="buttons">
-            <button  ng-click="toggleLeft()" style="background: transparent;border: none;font-size: 17pt;color:white;"><i class="ion-navicon-round"></i></button>
+            <button  ng-click="ToggleMenu()"><i class="ion-navicon-round"></i></button>
         </div>
         <h1 class="title" style="color:white;">Weather App</h1>
-     
     </ion-header-bar>
 
+    <!--Hamburguer Menu-->
+    <div id="menuPanel" >
+        <ion-header-bar align-title="left" class="bar-positive">
+            <div class="buttons">
+                <button ng-click="ToggleMenu()"><i class="ion-close"></i></button>
+            </div>
+            <h1 class="title" style="color:white;" >Menu</h1>
+        </ion-header-bar>
 
+        <ul id="menuTabs">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+        </ul>
+
+    </div>
+
+    <div id="overlay"  ng-click="ToggleMenu()">
+        <!--Black shade to close menu on click-->
+    </div>
    
 </div>
+
+<style>
+    .buttons button {
+        background: transparent;
+        border: none;
+        font-size: 17pt;
+        color:white;
+    }
+
+    #menuPanel {
+        transition: all ease-in 0.25s;
+        height:100vh;
+        width:0;
+        overflow:hidden;
+        max-width:300px;
+        position:fixed;
+        z-index:10;
+        background-color: rgb(88, 122, 183);
+        color: rgb(255, 255, 255);
+        border-color: rgb(12, 96, 238);
+        padding-top:50px;
+    }
+
+    #overlay {
+        display:none;
+        transition: all ease-in 0.25s;
+        height:100vh;
+        width:100%;
+        position:fixed;
+        z-index:9;
+        background-color: rgba(0,0,0,0.8);
+    }
+
+    #menuTabs li{
+        height: 45px;
+        cursor: pointer;
+        border-bottom: #999 solid thin;
+        line-height: 45px;
+        padding-left: 5px;
+        font-size: 14pt;
+    }
+</style>

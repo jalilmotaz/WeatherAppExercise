@@ -1,51 +1,70 @@
-﻿<div ng-controller="weatherCtrl" class="topMargin">
+﻿<!-- Weather page simply reads the information set into the $rootScope.WeatherData object-->
+<div  class="topMargin">
     <div class="row">
-        <div class="col"><p class="note">  Weather</p></div>
-    </div>
+          <div class="col"><p class="note">  WEATHER</p></div>
+</div>
     <div class="row">
-        <div class="col col-75">
-            <h3>Partly Cloudy </h3>
-            <p>YES YES YES YES YES YESYES YES YES YES YESYES YES YES YES YESYES YES YES YES YESYES YES YES YES </p>
-        </div>
         <div class="col ">
-            <h1>86&#8457; </h1>
-        </div>
+            <h3 class="text-capitalize">{{$root.weatherData.mainWeather}} </h3>
+            <p class="item-note">{{$root.weatherData.description}}</p>
+</div>
+        <div class="col">
+               <h1 class="text-right">{{$root.weatherData.tempF}} <span class="degree">&deg;F</span></h1>
+</div> 
     </div>
      <div class="list">
         <i class="item">
-            Wind Speed
-            <span class="item-note">
-                1 m/s
-            </span>
-        </i>
+            <strong>
+                Wind Speed
+                </strong>
+                <span class="item-note">
+                    {{$root.weatherData.windSpeedMPS}}
+                </span>
+</i>
         <i class="item">
-            Cloudiness
-            <span class="item-note">
-                Temporal Artery
-            </span>
-        </i>
+            <strong>
+                Cloudiness
+                </strong>
+                <span class="item-note">
+                    {{$root.weatherData.cloudiness}}
+                </span>
+</i>
         <i class="item">
-            Pressure
-            <span class="item-note">
-                1035 hpa
-            </span>
-        </i>
+            <strong>
+                Pressure
+                </strong>
+                <span class="item-note">
+                    {{$root.weatherData.pressure}}
+                </span>
+</i>
         <i class="item">
-           Humidity
-            <span class="item-note">
-                93%
-            </span>
-        </i>
+            <strong>
+                Humidity
+                </strong>
+                <span class="item-note">
+                    {{$root.weatherData.humidity}}
+                </span>
+</i>
         <i class="item">
-            Sunrise
-            <span class="item-note">
-                Sunset
-            </span>
-        </i>
-     
+            <strong>
+                Sunrise
+                </strong>
+                <span class="item-note">
+                    {{$root.weatherData.sunrise}}
+                </span>
+</i>
+         <i class="item">
+             <strong>
+                 Sunset
+                 </strong>
+                 <span class="item-note">
+                     {{$root.weatherData.sunset}}
+                 </span>
+</i>
+
       
     </div>
     <div class="row">
-        <div class="col"><p class="note">  Measured: Philadelphia, Pennsylvania</p></div>
+        <div class="col"><p class="note">  Measured: {{$root.weatherData.city}}</p></div>
     </div>
 </div>

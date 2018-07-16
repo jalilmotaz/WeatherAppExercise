@@ -1,14 +1,23 @@
-﻿<div class="topMargin" ng-controller="homeCtrl">
-    <h3>Welcome to U.S weather app</h3>
-    <h3> Simply enter your zip code and get real weather time results</h3>
+﻿<div class="topMargin" >
+    <h4 class="text-center">Welcome to the Weather App for USA</h4>
     <div class="list list-inset">
+        <p>Simply share your location or enter any zip code and get weather results in real time</p>
+        <h5>Note: Please have your device location enabled to share your location with app</h5>
+
+        <button class="button button-full button-positive" ng-click="$root.ShareLocation(zipcode)">
+            Share location
+        </button>
+        <br />
+        <br />
         <label class="item item-input">
             <i class="ion-location placeholder-icon"></i>
-            <input type="number" placeholder="Zip Code" ng-model="zipcode">
+            <input type="text" placeholder="Zip Code" ng-model="zipcode">
         </label>
+
+
+        <button class="button button-full button-positive" ng-click="SubmitZipCode(zipcode)">
+            Get Weather 
+        </button>
     </div>
     
-    <button class="button button-full button-positive" ng-click="SubmitZipCode(zipcode)">
-     Check Weather Conditions
-    </button>
-    </div>
+</div>

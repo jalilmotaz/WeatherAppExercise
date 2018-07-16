@@ -1,4 +1,19 @@
 ﻿/* Empty. Add your own CSS if you like */
 .topMargin{
-    margin-top:40px !important;
+    margin-top:50px !important;
+}
+ 
+.note{
+    color: #aaa;
+    font-size: 14px;
+}
+.degree{
+        position: relative;
+    top: -5px;
+    font-size: 20pt;
+    left: -10px;
+}
+
+.text-capitalize{
+        text-transform: capitalize;
 }
