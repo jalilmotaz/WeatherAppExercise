@@ -46,7 +46,7 @@ With Visual Studio:
 
 ```
 WeatherAppExercise/
-├── README.md/								   * This File
+├── README.md/                                 * This File
 ├── gitignore/                                 * git ignore file
 ├── WeatherApp/                                * Weather App folder
 	├── WeatherApp.sln/                        * Visual studio project solution
@@ -68,7 +68,7 @@ WeatherAppExercise/
 		│   │   
 		│   ├── js/                            * Main JS files folder
 		│   │    └── app.js					   * Main AngularJS entry point
-		│   ├── directives/                    * Holds the controllers and html tempaltes
+		│   ├── directives/                    * Holds the controllers and HTML templates
 		│   │    └── controllers			   * AngularJS controllers
 		│   │    └── partials			       * HTML directive templates 
 		│   ├── css/                           * Compiled CSS
